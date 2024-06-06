@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agriculture website design</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,600;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css">
+<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title>TABLE</title>
+    
+    <style>
+        td {
+            border: 2px solid black;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+        #data_tbl{
+            width: 15vw;
+            text-align: center;
+            font-size: 20px;
+        }
+        .edit_tab {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <!--we are creating here navigation bar ---      SECTION 1--> 
+        <nav>
+            <a href="index.html"><img src="static/logo.png" ></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="">Home</a></li>
+
+                    <li><a href="https://khetibuddy.com/">Blog</a></li>
+
+                    <li><a href="">About</a></li>
+
+                    <li><a href="">Contacts</a></li>
+
+                </ul>
+
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        
+        <div class="text-box">
+            
+            <h1>Agriculture Recommendation System</h1>
+
+            <p>As a contribution towards increasing farming efficiency,IOT,ML based agriculture 
+                system is designed that will support <br>monitoring the crop and it will help the farmers 
+                give best possible recommendation by analyzing all the<br> parameters like humadity,soil 
+                moisture,quantity and quality of fertilizers to be added etc. </p>
+
+            <a href="" class="hero-btn">Visit Us To Know More</a>
+
+        </div>
+
+    </section>
+    <!--java script for toggle menu-->
+    <script>
+        var navLinks=document.getElementById("navLinks");
+        function showMenu(){
+            navLinks.style.right="0";
+        }
+        function hideMenu(){
+            navLinks.style.right="-200px"
+        }
+    </script>
+
+    <!--Another section for weather forcast according to location    ---  SECTION 2-->
+    <section>
+
+
+
+
+
+
+
+
+    </section>
+    <!--Section for user parameter inputs     ........        SECTION 3-->
+    <section class="user-input">
+        <h1>Farmer Inputs</h1>
+        <p>Farmer will give input crop type, soil type and Season</p>
+
+        <div class="contact-form">
+            <form action="{{url_for('contact')}}" method="POST" >
+
+                <!--second parameters according to data set-->
+
+                <label for="soil">Soil Type</label>
+                <select  id="soil" name="soil">
+                    <option type="text">Select Soil</option>
+                    <option type="text">Red</option>
+                    <option type="text">Black</option>
+                    <option type="text">Alluvial</option>
+                    <option type="text">Sandy</option>
+                    <option type="text">Clayey</option>
+                    <option type="text">Peat</option>
+                    <option type="text">Loamy</option>
+                    <!-- <option type="text">Mountain</option> -->
+                    <option type="text">Laterite</option>
+                    <option type="text">Brown</option>
+
+                </select>
+            <!--First parameters according to data set-->
+                <label for="crop">Crop Type</label>
+                <select  id="crop" name="crop">
+                    <option type="text">Select Crop</option>
+                    <option type="text">Wheat</option>
+                    <option type="text">Rice</option>
+                    <option type="text">Maize</option>
+                    <option type="text">Cotton</option>
+                    <option type="text">Johar</option>
+                    <option type="text">Tomato</option>
+                    <option type="text">Potato</option>
+                    <option type="text">Sunflower</option>
+                    <option type="text">Gram</option>
+                    <option type="text">Sugarcane</option>
+                    <option type="text">Onion</option>
+                    <option type="text">Carrot</option>
+                    <option type="text">Pulse</option>
+                    <option type="text">Coffee</option>
+                    <option type="text">Raddish</option>
+                    <option type="text">Cucumber</option>
+                    <option type="text">Lentils</option>
+                    <option type="text">Soyabean</option>
+                    <option type="text">Jute</option>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </select>
+
+            
+
+                <!--Third parameters according to data set-->
+                <!--
+                <label for="Season">Cropping Season</label>
+                <select  id="Season">
+                    <option value="Season">Select Season</option>
+                    <option value="rabi">Rabi</option>
+                    <option value="kharif">Kharif</option>
+                    <option value="zaid">Zaid</option>
+
+                -->
+
+                </select>
+
+                <label for="phone-no">Enter Your Contact Number.</label>
+                <input type="text" name="contact" placeholder="Mobile number">
+                <label for="Email">Your Email</label>
+                <input type="text" name="email" placeholder="Email">
+                <input type="submit" value="Submit">
+
+
+            </form>
+
+        </div>
+
+       
+       <div class="recom-result">
+           <h1>Recommendation Result</h1>
+           <p>Best possible recommendation through machine learning algrothism
+            based on <br>past year dataset and current condition of the field</p>
+            
+            
+            
+            
+            <div class="container">
+            
+            
+
+            <div class="row">
+                <li>{{lstindex[0]}} : {{lst[0]}}</li>
+                    <li>{{lstindex[1]}} : {{lst[1]}}</li>
+                    <li>{{lstindex[2]}} : {{lst[2]}}</li>
+                    <li>{{lstindex[3]}} : {{lst[3]}}</li>
+                    <li>{{lstindex[4]}} : {{lst[4]}}</li>
+                    <li>{{lstindex[5]}} : {{lst[5]}}</li>
+                
+                </div> 
+            </div>  
+            
+            
+            
+        
+            
+
+       </div>
+
+
+    </section>
+
+    <!-- Farm live update through sensors-->
+    <section class="live-update">
+        <h1>Farm live Update</h1>
+        <p>Farm live update through sensors</p>
+        
+        <div class="my_btn">
+            <button class="live_update" > <a href="https://docs.google.com/spreadsheets/d/1RCmR39Q9-LjaHC1D68qawW66rVSJ5gxUdm2j2K1sAD0/edit?usp=sharing" target="_blank">Live Update </a></button>
+        </div>
+
+        
+    </section>
+    
+<!-- Farmer testomonial -->
+
+    <section class="about-farmer">
+        <div>
+
+        </div>
+
+    </section>
+    <div class="edit_tab">
+        <table class="table">
+            <thead class="thead-dark">
+
+            </thead>
+        </table>
+    </div>
+
+    <!-- <script>
+
+        setInterval(() => {
+            window.location.reload();
+        }, 300000);
+
+        onload = fetch("static/23.06.csv").then(res => {
+            return res.text()
+        }).then(data => {
+            let result = data.split(/\r?\n|\r/).map(e => {
+                return e.split(",")
+            })
+            result.forEach(e => {
+                let m = e.map(e => {
+                    return `<td id="data_tbl">${e}</td>`;
+                }).join("")
+                let ce = document.createElement("tr");
+                ce.innerHTML = m;
+                if (ce.innerText != "") {
+                    document.querySelector("table").appendChild(ce);
+                }
+                // console.log(m);
+
+            })
+        })
+    </script> -->
+    
+   
+    
+</body>
+</html>
